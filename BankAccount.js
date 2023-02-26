@@ -9,6 +9,12 @@ class BankAccount {
         this.transactions.push(transaction);
         this.balance += amount;
     }
+
+    withdraw(amount, date) {
+        const transaction = { date, amount: -amount };
+        this.transactions.push(transaction);
+        this.balance -= amount;
+    }
 };
 
 module.exports = BankAccount;

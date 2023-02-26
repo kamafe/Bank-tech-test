@@ -11,9 +11,14 @@ describe('BankAccount', () => {
         expect(bankAccount.balance).toEqual(0);
     });
 
-    it('should correctly update the balance on a deposit', () => {
+    it('should correctly update the balance after a deposit', () => {
       bankAccount.deposit(1000, '10/01/2023');
       expect(bankAccount.balance).toEqual(1000);
     });
-    
+
+    it('should correctly update the balance after a withdrawal', () => {
+        bankAccount.deposit(1000, '10/01/2023');
+        bankAccount.withdraw(500, '14/01/2023');
+        expect(bankAccount.balance).toEqual(500);
+    })
 })
