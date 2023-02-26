@@ -15,6 +15,10 @@ class BankAccount {
         this.transactions.push(transaction);
         this.balance -= amount;
     }
+
+    getStatement() {
+        
+    }
 };
 
 module.exports = BankAccount;
